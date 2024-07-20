@@ -6,14 +6,12 @@ const peopleAlternative = process.env.DB_PEOPLE_RESPALDO
 
 const getPeople = async()=>{
     const response = await axios.get(people)
-    .done(response.data)
-    .fail({message: "error en la peticion"})
+    return response.data
 }
 
 const getPeopleAlternative = async()=>{
     const response = await axios.get(peopleAlternative)
-    .done(response.data)
-    .fail({message: "error en la peticion"})
+    return response.data
 }
 
 module.exports = {
